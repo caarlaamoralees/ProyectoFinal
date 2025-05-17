@@ -1,0 +1,115 @@
+/* estilo general para el formulario de inicio de sesion */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 40px;
+    padding-top: 50px; /* espacio para la cabecera */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white; /* para que el texto se vea sobre fondo oscuro */
+    z-index: 1000;
+}
+
+/* links de navegación */
+header nav a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* subrayado al pasar el raton por encima*/
+header nav a:hover {
+    text-decoration: underline; 
+}
+
+.contenedor {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* titilo del formulario */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* estilo del formulario */
+/* flex-direction alinea los elementos en columna */
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+/* etiqueta de los campos */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* campos de entrada */
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* boton de envio */
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* estilos para el boton */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* enlace de registro*/
+.boton {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* subrayado al pasar el raton encima */
+.boton:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* estilos para el mensaje de error*/
+.mensaje-error {
+    margin-top: 15px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}

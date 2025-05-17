@@ -1,0 +1,228 @@
+/* estilo general para el cuespo de la pagina */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 150px;
+}
+
+/* cabecera*/
+header {
+    position: fixed;
+    top: 0;
+    padding-left: 10px;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white; /* para que el texto se vea sobre fondo oscuro */
+    z-index: 1000;
+}
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+/*estilos para el boron de ver productos*/ 
+.boton {
+    background-color: #e0e0e0;
+    color: #007BFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.boton:hover {
+    background-color: #d5d5d5; /* un poco más oscuro al pasar el ratón */
+}
+
+/* estilos para el carrusel*/
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    margin: 20px auto; /* centrar el carrusel en el medio  */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* estilo para cada imagen del carrusel */
+.mySlides {
+    display: none;
+    width: 60vw;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+/* botones del carrusel */
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 10;
+}
+
+/*estilos para los links a las redes sociales*/
+.redes-sociales {
+    text-align: center;
+    background-color: white;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.redes-sociales h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #e0e0e0;
+    color: #007BFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.redes-sociales a:hover {
+    background-color: #d5d5d5;
+    transform: translateY(-2px);
+}
+
+/*margenes*/
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* botones del carrusel */
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/*para dividirlo en secciones */
+main,
+section {
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* mapa*/
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    left: 0;
+}
+
+/* para que sea responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .boton {
+        flex: none; /* para que no se estire */
+        min-width: 120px; /*para limitar ancho máximo */
+        text-align: center;
+        margin: 5px 0;
+        width: auto; /* para que se ajuste al contenido */
+    }
+
+
+    .carousel {
+        padding: 0 10px; /* para que no se pegue a los bordes del telefono */
+    }
+
+    .mySlides {
+        width: 80vw;
+        max-height: 150px;
+    }
+
+    .left-arrow, .right-arrow {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    main,
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .mapa iframe {
+        height: 250px;
+    }
+}

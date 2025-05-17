@@ -1,0 +1,113 @@
+/* estilos generales para el proyecto */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* tipo de letra base y fondo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    padding: 0px;
+    padding-top: 50px; /* espacio para la cabecera */
+}
+
+/* encabezados de la pagina*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white; /* para que el texto se vea sobre fondo oscuro */
+    z-index: 1000;
+}
+
+/* links de navegación */
+header nav a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* subrayado al pasar el raton por encima*/
+header nav a:hover {
+    text-decoration: underline; 
+}
+
+/* estilos para el main  */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+
+/* titulo  */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* aparecen los productos en columnas */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+a{
+    text-decoration: none; /* quita el subrayado de los links */
+}
+
+/* contenedores de cada producto */
+.producto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 0%;
+}
+
+/* efecto al pasar el raton por encima*/
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+/* foto del producto */
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* recorta y ajusta la foto para que no se deforme */
+}
+
+/* caracteristicas del producto */
+.producto .info {
+    padding: 15px;
+}
+
+/* titulo del producto */
+.producto h2 {
+    font-size: 1.2em;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* descripcion del producto */
+.producto p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
