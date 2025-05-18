@@ -10,11 +10,13 @@ include 'conn.php';
 
 $message = "";
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $email = $_POST['email'];
 
+    // validar los datos del formulario
     $stmt = $conn->prepare("UPDATE USUARIOS SET NOMBRE = ?, APELLIDO = ?, CORREO = ? WHERE ID = ?");
     $stmt->bind_param("ssss", $nombre, $apellido, $email, $_SESSION['userId']);
     $stmt->execute();

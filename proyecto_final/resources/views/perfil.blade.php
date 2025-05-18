@@ -33,6 +33,7 @@ if (isset($_SESSION["userId"])) {
     <main>
 
         <div>
+            <!-- formulario para actualizar los datos del usuario -->
             <h1>Mi perfil</h1>
             <form action="bbdd/actualizarPerfil.php" method="POST">
                 <input type="text" name="nombre" placeholder="nombre" value=<?php echo $user["NOMBRE"] ?> required>
@@ -43,6 +44,7 @@ if (isset($_SESSION["userId"])) {
                 <br>
                 <input type="submit" value="Actualizar datos"></input>
             </form>
+            <!-- botones para cerrar sesion y eliminar cuenta -->
             <a href="bbdd/cerrarSesion.php" class="cerrar-sesion">Cerrar sesión</a>
             <a href="bbdd/eliminarUsuario.php" class="cerrar-sesion">Eliminar Cuenta</a>
         </div>

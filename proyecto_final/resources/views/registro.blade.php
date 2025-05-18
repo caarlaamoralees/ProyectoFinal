@@ -17,7 +17,7 @@ unset($_SESSION['error_message']);
 <body>
     <header>
         <nav>
-            <!-- botones a las páginas de inicio de sesión y registro -->
+            <!-- botones a las paginas de inicio de sesion y registro -->
             <a href="{{ url('inicio') }}">Volver al inicio</a>
             <a href="{{ url('carrito') }}">Carrito</a>
         </nav>
@@ -62,12 +62,12 @@ unset($_SESSION['error_message']);
                 </label>
             </div>
 
-            <!-- mensaje de error (si lo hay) -->
+            <!-- mensaje de error si hubieran problemas -->
             <?php if ($message != "") : ?>
                 <p class="mensaje-error"><?php echo htmlspecialchars($message); ?></p>
             <?php endif; ?>
 
-            <!-- boton de envío -->
+            <!-- boton de envio -->
             <button type="submit">Registrarse</button>
 
             <a href="{{url('iniciar-sesion')}}" class="boton">Iniciar sesion</a>

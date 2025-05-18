@@ -18,7 +18,7 @@ unset($_SESSION['error_message']); // elimina el mensaje después de mostrarlo
 <body>
     <header>
         <nav>
-            <!-- botones a las páginas de inicio de sesión y registro -->
+            <!-- botones a las paginas de inicio de sesion y registro -->
             <a href="{{ url('inicio') }}">Volver al inicio</a>
             <a href="{{ url('carrito') }}">Carrito</a>
         </nav>
@@ -29,7 +29,7 @@ unset($_SESSION['error_message']); // elimina el mensaje después de mostrarlo
 
         <!-- formulario de login -->
         <form action="bbdd/iniciarSesion.php" method="POST" class="formulario">
-            <!-- Campo de correo, es el correo de inicio del usuario -->
+            <!-- correo de inicio del usuario -->
             <label for="correo">Correo:</label>
             <input type="email" name="correo" id="correo" required>
 
