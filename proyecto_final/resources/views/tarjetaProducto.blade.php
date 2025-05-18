@@ -1,12 +1,6 @@
 <?php
 include 'bbdd/conn.php';
 
-if (!isset($_GET['id'])) {
-    http_response_code(400);
-    die("Falta el parámetro ID");
-}
-
-$id = $_GET['id'];
 $stmt = $conn->prepare("SELECT * FROM PRODUCTOS WHERE ID = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -24,8 +18,9 @@ $producto = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title>Detalle del Producto</title>
-    <link rel="stylesheet" href="css/estilosProductoDetalle.css">
+    <link rel="stylesheet" href="/css/estilosProductoDetalle.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -44,6 +39,7 @@ $producto = $result->fetch_assoc();
             <li><strong>Descripción:</strong> <?php echo htmlspecialchars($producto['DESCRIPCION']); ?></li>
         </ul>
     </main>
+    
     <!-- boton agregar al carrito -->
     <div class="boton-agregar">
         <form action="carrito.php" method="post">
@@ -53,8 +49,10 @@ $producto = $result->fetch_assoc();
             <button type="submit">Agregar al carrito</button>
         </form>
     </div>
+
     <footer>
         <p>&copy; 2025 - Página hecha por Carla Morales Jimenez</p>
     </footer>
+
 </body>
 </html>

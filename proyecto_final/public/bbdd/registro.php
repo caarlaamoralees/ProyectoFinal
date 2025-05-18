@@ -12,20 +12,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $contrasena = $_POST['contrasena'];
 
-    // Encriptar la contraseña
+    // encriptar la contraseña
     $hased_password = password_hash($contrasena, PASSWORD_DEFAULT); 
 
     $fecha = $_POST['fecha'];
     $genero = $_POST['genero'];
 
 
-    // Validar los datos del formulario para que los emails no se repitan
+    // validar los datos del formulario para que los emails no se repitan
     $checkEmailStmt = $conn->prepare("SELECT CORREO FROM USUARIOS WHERE CORREO = ?");
     $checkEmailStmt->bind_param("s", $email);
     $checkEmailStmt->execute();
     $checkEmailStmt->store_result();
 
-    // Insertar el nuevo usuario en la base de datos
+    // insertar el nuevo usuario en la base de datos
     if ($checkEmailStmt->num_rows != 0) {
         $mensaje = "El email introducido ya esta registrado";
     } else {

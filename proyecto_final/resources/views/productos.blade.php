@@ -29,6 +29,7 @@ if ($result->num_rows === 0) {
     <!-- botones a las páginas de inicio de sesión y registro -->
     <a href="{{ url('inicio') }}">Volver al inicio</a>
     <a href="{{ url('carrito') }}">Carrito</a>
+    <a href="{{ route('productos.xml') }}" class="btn btn-primary">Descargar XML</a>
         </nav>
     </header>
 
@@ -40,7 +41,7 @@ if ($result->num_rows === 0) {
         <section class="productos">
             <!-- muestra los productos disponibles de la base de datos -->
             <?php while($row = $result->fetch_assoc()) : ?>
-                <a class="producto" href="{{url('/detalles/$row['ID'])}}">
+                <a class="producto" href="http://localhost:8000/detalles/<?php echo $row['ID']; ?>">
                     <!-- fotos de los productos -->
                     <img src="<?php echo htmlspecialchars($row['IMAGEN']); ?>" alt="Imagen de <?php echo htmlspecialchars($row['MARCA']); ?>">
                     
