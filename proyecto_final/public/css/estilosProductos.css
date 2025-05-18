@@ -103,6 +103,28 @@ a{
     color: #555;
 }
 
+/* Botón agregar al carrito */
+.boton-agregar {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px; /* ✅ MARGEN ABAJO */
+}
+
+.boton-agregar button {
+    background-color: #e60023;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar button:hover {
+    background-color: #c1001d;
+}
+
 /* footer */
 footer {
     background-color: #222;

@@ -20,16 +20,17 @@ if ($result->num_rows === 0) {
     <title>Lista de Productos</title>
     <!-- estilos para la pagina principal -->
     <link rel="stylesheet" href="css/estilosProductos.css">
+    <script src="js/carrito.js"></script>
 </head>
-<body>
 
+<body>
     <!-- encabezado -->
     <header>
         <nav>
-    <!-- botones a las páginas de inicio de sesión y registro -->
-    <a href="{{ url('inicio') }}">Volver al inicio</a>
-    <a href="{{ url('carrito') }}">Carrito</a>
-    <a href="{{ route('productos.xml') }}" class="btn btn-primary">Descargar XML</a>
+            <!-- botones a las páginas de inicio de sesión y registro -->
+            <a href="{{ url('inicio') }}">Volver al inicio</a>
+            <a href="{{ url('carrito') }}">Carrito</a>
+            <!--<a href="{{ route('productos.xml') }}" class="btn btn-primary">Descargar XML</a>-->
         </nav>
     </header>
 
@@ -53,6 +54,12 @@ if ($result->num_rows === 0) {
                         <p><strong>Precio:</strong> <?php echo htmlspecialchars($row['PRECIO']); ?> €</p>
                     </div>
                 </a>
+                <!-- boton agregar al carrito -->
+                 <button onclick="<?php 
+                 $_SESION["productoID"] = $row['ID'];
+                 header('Location: bbdd/añadirCarrito.php');
+                 
+                 ?>" type="submit">Agregar al carrito</button>
             <?php endwhile; ?>
         </section>
     </main>

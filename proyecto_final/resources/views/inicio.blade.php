@@ -77,14 +77,14 @@
         }
 
     </script>
-
+    </section>
+    
     <!-- contenido principal -->
     <main>
         <h2>Explora nuestros productos</h2>
         <p>Descubre una amplia gama de motos y accesorios.</p>
         <a href="{{url('iniciar-sesion')}}" class="boton">Ver Productos</a>
     </main>
-    </section>
 
     <!-- seccion de informacion -->
     <section class="informacion">
@@ -123,7 +123,6 @@
         </blockquote>
     </section>
 
-
     <!-- seccion de redes sociales -->
     <section class="redes-sociales">
         <h2>Síguenos en nuestras redes sociales</h2>
@@ -138,4 +137,4 @@
     </footer>
 
 </body>
-</html>
+</html> 
