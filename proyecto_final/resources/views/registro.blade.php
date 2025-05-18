@@ -22,6 +22,7 @@ unset($_SESSION['error_message']);
             <a href="{{ url('carrito') }}">Carrito</a>
         </nav>
     </header>
+    
 
     <!-- contenedor del formulario -->
     <main class="contenedor">

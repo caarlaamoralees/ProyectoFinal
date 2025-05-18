@@ -22,9 +22,12 @@ Route::get('/productos', function () {
     return view('productos');
 });
 
-Route::get('/detalles/{id}', function (int $id) {
-    return view('tarjetaProducto', ['id' => $id]);
+Route::get('/perfil', function () {
+    return view('perfil');
 });
+
 use App\Http\Controllers\ProductoController;
 
 Route::get('/descargar-xml', [ProductoController::class, 'descargarXML'])->name('productos.xml');
+
+
