@@ -20,7 +20,6 @@ unset($_SESSION['error_message']); // elimina el mensaje después de mostrarlo
         <nav>
             <!-- botones a las paginas de inicio de sesion y registro -->
             <a href="{{ url('inicio') }}">Volver al inicio</a>
-            <a href="{{ url('carrito') }}">Carrito</a>
         </nav>
     </header>
 
